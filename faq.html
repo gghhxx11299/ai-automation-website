@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - AutoCall AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html"><h2>Auto<span>Call</span>AI</h2></a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="support.html" class="nav-link">Support</a>
+                    <a href="faq.html" class="nav-link active">FAQ</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="faq-hero">
+            <div class="container">
+                <h1 class="page-title">Frequently Asked Questions</h1>
+                <p class="page-subtitle">Find answers to common questions about our AI automation services</p>
+                
+                <div class="search-container">
+                    <input type="text" id="faq-search" placeholder="Search for questions...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="general">General</button>
+                    <button class="category-btn" data-category="billing">Billing</button>
+                    <button class="category-btn" data-category="technical">Technical</button>
+                    <button class="category-btn" data-category="integration">Integration</button>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-item" data-category="general">
+                        <button class="faq-question">
+                            <span>What is AutoCallAI?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>AutoCallAI is an AI-powered automation platform that helps businesses automate phone calls, emails, and WhatsApp messages. Our advanced AI technology handles customer interactions, follow-ups, appointments, and support inquiries efficiently.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="general">
+                        <button class="faq-question">
+                            <span>How does phone call automation work?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our AI phone system makes and receives calls using natural-sounding voices. It can handle appointments, follow-ups, surveys, and customer inquiries. The system understands context, responds appropriately, and can escalate to human agents when needed.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="billing">
+                        <button class="faq-question">
+                            <span>How is billing calculated?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Billing is based on the number of AI interactions per month. Each initiated conversation or response counts as an interaction. Our plans range from 1,000 interactions for the starter plan to 20,000 for enterprise, with custom options available for higher volumes.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="billing">
+                        <button class="faq-question">
+                            <span>Do you offer annual plans?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer annual plans with a 20% discount compared to monthly billing. Annual plans provide cost savings and ensure uninterrupted service throughout the year. Contact our sales team for enterprise annual plans.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="technical">
+                        <button class="faq-question">
+                            <span>Is my data secure with AutoCallAI?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Security is our top priority. We use enterprise-grade encryption for data in transit and at rest. Our infrastructure is hosted on secure cloud platforms with SOC 2 Type II compliance. We also provide data residency options for specific regions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="technical">
+                        <button class="faq-question">
+                            <span>Can I customize the AI's responses?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, our platform offers extensive customization options. You can train the AI with your specific scripts, responses, and conversation flows. Use our visual workflow editor to create complex decision trees and customize responses based on context and user inputs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="integration">
+                        <button class="faq-question">
+                            <span>What systems can AutoCallAI integrate with?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer integrations with popular CRM systems like Salesforce, HubSpot, and Zoho, as well as business tools like Zapier, Slack, and Google Workspace. Our API allows for custom integrations with your existing systems. Contact our support team for specific integration requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="integration">
+                        <button class="faq-question">
+                            <span>Can I try AutoCallAI before purchasing?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer a 14-day free trial that includes 100 AI interactions. This allows you to test our platform with your specific use cases. You can upgrade to a paid plan anytime during the trial. Enterprise accounts can request extended trials.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="general">
+                        <button class="faq-question">
+                            <span>How long does setup take?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Basic setup can be completed in under 10 minutes for simple use cases. More complex implementations with custom integrations may take 1-3 days. Our team provides onboarding assistance to ensure a smooth setup process. Enterprise customers receive dedicated onboarding support.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="technical">
+                        <button class="faq-question">
+                            <span>What languages does AutoCallAI support?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our AI supports 15+ languages including English, Spanish, French, German, Portuguese, Chinese, Japanese, and more. We continue to add support for additional languages. Contact us if your required language isn't listed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="need-more-help">
+            <div class="container">
+                <h2>Still have questions?</h2>
+                <p>Our support team is ready to help you with any additional questions you may have.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Support</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Auto<span>Call</span>AI</h3>
+                    <p>Revolutionizing business communication with AI-powered automation solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Phone Call Automation</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">WhatsApp Business</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoCallAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>
