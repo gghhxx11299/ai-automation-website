@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoCall AI - AI Phone, Email & WhatsApp Automation</title>
+    <title>AutoCall AI - Revolutionary AI Communication Platform</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 </head>
 <body>
+    <!-- Canvas for 3D background -->
+    <canvas id="bg-canvas"></canvas>
+    
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
@@ -36,26 +40,94 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section with 3D Elements -->
         <section class="hero">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title">AI-Powered Automation for <span class="typing-text"></span></h1>
-                    <p class="hero-subtitle">Automate phone calls, emails, and WhatsApp messages with our cutting-edge AI technology. Increase efficiency and customer engagement effortlessly.</p>
-                    <div class="hero-buttons">
-                        <a href="pricing.html" class="btn btn-primary">Get Started</a>
-                        <a href="contact.html" class="btn btn-secondary">Schedule Demo</a>
+                    <div class="hero-badge">
+                        <i class="fas fa-bolt"></i>
+                        <span>Revolutionary AI Platform</span>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-animation">
-                        <div class="floating-element el-1"></div>
-                        <div class="floating-element el-2"></div>
-                        <div class="floating-element el-3"></div>
-                        <div class="main-visual">
-                            <i class="fas fa-robot"></i>
+                    <h1 class="hero-title">
+                        The Future of <span class="neon-text">Business Communication</span><br>
+                        is <span class="typing-text"></span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transform your customer interactions with our cutting-edge AI platform. 
+                        Automate phone calls, emails, and WhatsApp messages with human-like intelligence 
+                        that understands context, sentiment, and intent.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="pricing.html" class="btn btn-primary btn-neon">
+                            <span>Start Free Trial</span>
+                            <div class="btn-glow"></div>
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            <span>Schedule Demo</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span class="stat-number">5000+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-comments"></i>
+                            <span class="stat-number">10M+</span>
+                            <span class="stat-label">Conversations</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-bolt"></i>
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime</span>
                         </div>
                     </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-orb">
+                        <div class="orb-core"></div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-particles">
+                            <div class="particle p1"></div>
+                            <div class="particle p2"></div>
+                            <div class="particle p3"></div>
+                            <div class="particle p4"></div>
+                            <div class="particle p5"></div>
+                            <div class="particle p6"></div>
+                        </div>
+                        <div class="ai-visual">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="communication-bubbles">
+                        <div class="bubble b1">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="bubble b2">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="bubble b3">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="bubble b4">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="trust">
+            <div class="container">
+                <p class="trust-text">Trusted by industry leaders and innovative businesses worldwide</p>
+                <div class="trust-logos">
+                    <div class="logo-item">TechCorp</div>
+                    <div class="logo-item">Global Inc</div>
+                    <div class="logo-item">InnovateX</div>
+                    <div class="logo-item">FutureLabs</div>
+                    <div class="logo-item">NextGen</div>
                 </div>
             </div>
         </section>
@@ -63,32 +135,95 @@
         <!-- Features Section -->
         <section class="features">
             <div class="container">
-                <h2 class="section-title">Our Powerful Features</h2>
-                <p class="section-subtitle">Experience seamless automation across all communication channels</p>
-                
+                <div class="section-header">
+                    <h2 class="section-title">Next-Gen <span class="neon-text">Automation Features</span></h2>
+                    <p class="section-subtitle">Experience seamless automation across all communication channels with AI that learns and adapts</p>
+                </div>
+
                 <div class="features-grid">
+                    <div class="feature-card featured">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Advanced AI Processing</h3>
+                        <p>Deep learning neural networks that understand context, tone, and intent for more human-like interactions.</p>
+                        <div class="feature-badge">AI-Powered</div>
+                    </div>
+
                     <div class="feature-card">
                         <div class="feature-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
-                        <h3>AI Phone Calls</h3>
-                        <p>Automated phone conversations that sound natural and human-like, handling appointments, follow-ups, and customer inquiries.</p>
+                        <h3>Intelligent Call Handling</h3>
+                        <p>Automate phone conversations with natural speech that handles complex objections and closes deals.</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <h3>Smart Email Automation</h3>
-                        <p>Personalized email campaigns that respond to user behavior and preferences, increasing engagement and conversion rates.</p>
+                        <h3>Dynamic Email Automation</h3>
+                        <p>Create personalized email sequences that adapt based on recipient behavior and preferences.</p>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
-                        <h3>WhatsApp Integration</h3>
-                        <p>Automate customer support and marketing messages on WhatsApp with our intelligent chatbot technology.</p>
+                        <h3>WhatsApp Business AI</h3>
+                        <p>Engage customers on the world's most popular messaging platform with intelligent automation.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Real-Time Analytics</h3>
+                        <p>Track performance metrics and optimize campaigns with actionable insights and conversion data.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Enterprise Security</h3>
+                        <p>Bank-level encryption and compliance with GDPR, CCPA, and other privacy regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section class="technology">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Cutting-Edge <span class="neon-text">AI Technology</span></h2>
+                    <p class="section-subtitle">Powered by the latest advancements in machine learning and natural language processing</p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Deep Neural Networks</h3>
+                        <p>Advanced models trained on millions of conversations to understand context and provide human-like responses.</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Multilingual NLP</h3>
+                        <p>Natural language processing that understands nuances, sentiment, and cultural context in 15+ languages.</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>Continuous Learning</h3>
+                        <p>AI that learns from every interaction to improve responses and outcomes over time.</p>
                     </div>
                 </div>
             </div>
@@ -98,55 +233,32 @@
         <section class="stats">
             <div class="container">
                 <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3 class="stat-number">98%</h3>
-                        <p>Customer Satisfaction</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3 class="stat-number">24/7</h3>
-                        <p>Automated Support</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3 class="stat-number">5M+</h3>
-                        <p>Messages Handled</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3 class="stat-number">400%</h3>
-                        <p>ROI Increase</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technology Section -->
-        <section class="technology">
-            <div class="container">
-                <h2 class="section-title">Advanced AI Technology</h2>
-                <p class="section-subtitle">Powered by cutting-edge machine learning and natural language processing</p>
-
-                <div class="tech-grid">
-                    <div class="tech-card">
-                        <div class="tech-icon">
-                            <i class="fas fa-brain"></i>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-robot"></i>
                         </div>
-                        <h3>Neural Networks</h3>
-                        <p>Deep learning models that understand context and provide human-like responses.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="tech-icon">
-                            <i class="fas fa-language"></i>
+                        <div class="stat-content">
+                            <h3 class="stat-number">98.7%</h3>
+                            <p>Customer Satisfaction</p>
                         </div>
-                        <h3>Natural Language Processing</h3>
-                        <p>Advanced understanding of human language, intent, and sentiment.</p>
                     </div>
-
-                    <div class="tech-card">
-                        <div class="tech-icon">
-                            <i class="fas fa-sync-alt"></i>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
                         </div>
-                        <h3>Real-time Analytics</h3>
-                        <p>Continuous learning and optimization based on conversation outcomes.</p>
+                        <div class="stat-content">
+                            <h3 class="stat-number">24/7</h3>
+                            <p>Availability</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">350%</h3>
+                            <p>Average ROI</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,37 +267,98 @@
         <!-- Testimonials Section -->
         <section class="testimonials">
             <div class="container">
-                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Client <span class="neon-text">Success Stories</span></h2>
+                    <p class="section-subtitle">Hear from businesses that transformed their operations with our platform</p>
+                </div>
 
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="testimonial-content">
-                            <p>"AutoCallAI transformed our customer service operations. Our response time decreased by 80% and customer satisfaction increased significantly."</p>
+                            <p>"AutoCallAI reduced our customer service costs by 70% while improving response quality. The AI handles complex queries that previously required human agents."</p>
                         </div>
                         <div class="testimonial-author">
-                            <h4>Sarah Johnson</h4>
-                            <span>CEO, TechSolutions Inc.</span>
+                            <img src="https://via.placeholder.com/60x60" alt="Sarah Johnson">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>CEO, TechSolutions Inc.</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
                     </div>
 
                     <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="testimonial-content">
-                            <p>"The WhatsApp automation feature saved us countless hours of manual work. Our team can now focus on strategic tasks while AI handles routine inquiries."</p>
+                            <p>"Implementation was seamless and our team went from 10 agents to 2 while handling 3x more customers. The AI is indistinguishable from humans."</p>
                         </div>
                         <div class="testimonial-author">
-                            <h4>Michael Chen</h4>
-                            <span>Operations Director, Global Retail</span>
+                            <img src="https://via.placeholder.com/60x60" alt="Michael Chen">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <span>Operations Director, Global Retail</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
                     </div>
 
                     <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="testimonial-content">
-                            <p>"Implementation was seamless and the support team was incredibly helpful. We saw immediate improvements in our communication efficiency."</p>
+                            <p>"The WhatsApp automation alone increased our conversion rate by 400%. Our customers love the instant, personalized responses."</p>
                         </div>
                         <div class="testimonial-author">
-                            <h4>Elena Rodriguez</h4>
-                            <span>Marketing Head, FinTech Group</span>
+                            <img src="https://via.placeholder.com/60x60" alt="Elena Rodriguez">
+                            <div class="author-info">
+                                <h4>Elena Rodriguez</h4>
+                                <span>Marketing Head, FinTech Group</span>
+                            </div>
                         </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                    <p class="cta-subtitle">Join thousands of companies using AI to revolutionize their customer communications</p>
+                    <div class="cta-buttons">
+                        <a href="pricing.html" class="btn btn-primary btn-neon">
+                            <span>Start Free Trial</span>
+                            <div class="btn-glow"></div>
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            <span>Contact Sales</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -197,7 +370,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>Auto<span>Call</span>AI</h3>
-                    <p>Revolutionizing business communication with AI-powered automation solutions.</p>
+                    <p>Revolutionizing business communication with cutting-edge AI-powered automation solutions.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -205,17 +378,17 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Phone Call Automation</a></li>
-                        <li><a href="#">Email Marketing</a></li>
-                        <li><a href="#">WhatsApp Business</a></li>
-                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="services.html#phone">Phone Call Automation</a></li>
+                        <li><a href="services.html#email">Email Marketing</a></li>
+                        <li><a href="services.html#whatsapp">WhatsApp Business</a></li>
+                        <li><a href="services.html#support">Customer Support</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
@@ -244,5 +417,50 @@
 
     <script src="js/main.js"></script>
     <script src="js/animation.js"></script>
+    <script>
+        // Initialize 3D background
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Typed.js
+            const typed = new Typed('.typing-text', {
+                strings: ['AI-Powered', 'Intelligent', 'Revolutionary', 'Future-Ready'],
+                typeSpeed: 100,
+                backSpeed: 50,
+                backDelay: 2000,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|'
+            });
+
+            // Initialize ScrollReveal for animations
+            const sr = ScrollReveal({
+                origin: 'top',
+                distance: '30px',
+                duration: 2000,
+                reset: true
+            });
+
+            sr.reveal('.hero-content', { delay: 200 });
+            sr.reveal('.ai-orb', { delay: 400 });
+            sr.reveal('.communication-bubbles', { delay: 600 });
+            sr.reveal('.trust-logos .logo-item', { interval: 200 });
+            sr.reveal('.feature-card', { interval: 200, delay: 100 });
+            sr.reveal('.tech-card', { interval: 200, delay: 200 });
+            sr.reveal('.stat-card', { interval: 300, delay: 100 });
+            sr.reveal('.testimonial-card', { interval: 300, delay: 200 });
+            sr.reveal('.cta-content', { delay: 300 });
+            
+            // Parallax effect for hero elements
+            document.addEventListener('mousemove', (e) => {
+                const orbs = document.querySelectorAll('.orb-core, .orb-ring, .orb-particles .particle');
+                
+                orbs.forEach((orb, index) => {
+                    const speed = (index + 1) * 0.05;
+                    const x = (window.innerWidth / 2 - e.pageX) * speed;
+                    const y = (window.innerHeight / 2 - e.pageY) * speed;
+                    orb.style.transform = `translateX(${x}px) translateY(${y}px)`;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
