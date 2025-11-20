@@ -85,29 +85,115 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to create floating particles for background effect
 function createFloatingParticles() {
     const hero = document.querySelector('.hero');
-    const particleCount = 20;
-    
+    const particleCount = 30;
+
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.classList.add('floating-particle');
-        
+
         // Random properties
-        const size = Math.random() * 10 + 2;
+        const size = Math.random() * 8 + 2;
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
-        const animationDuration = Math.random() * 10 + 10;
+        const animationDuration = Math.random() * 15 + 10;
         const delay = Math.random() * 5;
-        
+        const hue = Math.floor(Math.random() * 360);
+
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
         particle.style.left = `${posX}%`;
         particle.style.top = `${posY}%`;
         particle.style.animationDuration = `${animationDuration}s`;
         particle.style.animationDelay = `${delay}s`;
-        
+        particle.style.background = `hsla(${hue}, 70%, 60%, 0.3)`;
+
         hero.appendChild(particle);
     }
 }
+
+// Add more dynamic animations
+function initDynamicAnimations() {
+    // Add a subtle background animation to the entire page
+    const body = document.body;
+    body.style.position = 'relative';
+
+    // Create a canvas for background animations
+    const canvas = document.createElement('canvas');
+    canvas.id = 'bg-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.zIndex = '0';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.opacity = '0.3';
+    document.body.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+    const particles = [];
+
+    // Set canvas size to match window
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    // Initialize canvas size
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Particle class
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 2 + 0.5;
+            this.speedX = Math.random() * 1 - 0.5;
+            this.speedY = Math.random() * 1 - 0.5;
+            this.color = `hsla(${Math.random() * 360}, 70%, 60%, 0.5)`;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+            if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+        }
+
+        draw() {
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    // Create particles
+    for (let i = 0; i < 50; i++) {
+        particles.push(new Particle());
+    }
+
+    // Animation loop
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initDynamicAnimations();
+});
 
 // Add CSS for ripple effect dynamically
 const rippleStyle = document.createElement('style');
